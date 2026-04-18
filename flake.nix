@@ -19,16 +19,14 @@
       in {
         default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            openjdk17
+            maven
+            nodejs_20
             redis
             mariadb
             fontconfig
             dejavu_fonts
           ];
-
-          shellHook = ''
-            export JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
-            echo "RuoYi-Vue 开发环境就绪: just --list"
-          '';
         };
       }
     );

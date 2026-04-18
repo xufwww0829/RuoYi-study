@@ -1,6 +1,10 @@
 default:
     @echo "just start-all / start-redis / start-db / stop"
 
+build:
+    cd RuoYi-Vue-springboot3 && mvn clean compile -DskipTests
+    cd RuoYi-Vue3-v3.8.8 && npm install
+
 start-redis:
     mkdir -p .local/redis
     redis-server --dir $PWD/.local/redis --pidfile $PWD/.local/redis/redis.pid --daemonize yes
