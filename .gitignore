@@ -1,0 +1,11 @@
+.local/
+target/
+node_modules/
+*.class
+*.jar
+*.war
+.DS_Store
+*.log
+.idea/
+*.iml
+.vscode/
